@@ -7,8 +7,7 @@ function listFiles() {
     'bower_components/angular/angular.js',
     'bower_components/angular-mocks/angular-mocks.js',
     'app/app.js',
-    'app/services/mainService.js',
-    'app/controllers/mainController.js',
+    'app/services/checkoutService.js',
     'spec/**/*.js',
   ];
 }
@@ -47,8 +46,7 @@ module.exports = function (config) {
       //'karma-chrome-launcher',
       //'karma-firefox-launcher',
       'karma-jasmine',
-      'karma-junit-reporter',
-      'karma-coverage'
+      'karma-junit-reporter'
     ],
 
     // Continuous Integration mode
@@ -61,19 +59,7 @@ module.exports = function (config) {
     // possible values: LOG_DISABLE || LOG_ERROR || LOG_WARN || LOG_INFO || LOG_DEBUG
     logLevel: config.LOG_DEBUG,
 
-    preprocessors: {
-      'app/**/*.js': 'coverage'
-    },
-
-    coverageReporter: {
-      dir: 'test-coverage/',
-      reporters: [
-        { type: 'text-summary' },
-        { type: 'html', subdir: 'report-html' }
-      ]
-    },
-
-    reporters: ['progress', 'coverage', 'junit'],
+    reporters: ['progress', 'junit'],
 
     junitReporter: {
       outputDir: '',
