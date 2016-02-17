@@ -27,3 +27,17 @@
   brew install node
   npm install -g bower gulp
   ```
+
+### Run your tests
+- Install npm and bower packages in project's folder
+
+  ```
+  npm install
+  bower install
+  ```
+
+- Have fun!
+
+  ```
+  gulp test
+  ```
